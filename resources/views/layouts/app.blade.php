@@ -20,10 +20,10 @@
 
 <body>
     <header>
-    {{-- @include('partials.header') --}}
+
 </header>
 <main>
-    <div class="container">
+    <div class="container-fluid">
         @yield('content')
     </div>
 </main>
