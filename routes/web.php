@@ -17,4 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
 
-Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/', 'Guest\PageController@index');
