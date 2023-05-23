@@ -1,7 +1,7 @@
 <?php
 
 
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
 
-Route::get('/', 'Guest\PageController@index');
+Route::get('/movies', [PageController::class, 'index'])->name('movies.index');
+
+Route::get('/movies{id} ', [PageController::class, 'show'])->name('movies.show');
